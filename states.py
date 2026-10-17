@@ -1,0 +1,2 @@
+STATE_PLAYING = True
+STATE_GAME_OVER = False
