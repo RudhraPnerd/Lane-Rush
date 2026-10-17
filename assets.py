@@ -7,8 +7,10 @@ background = None
 car = None
 traffic = None
 
+point_effect = None
+
 def load_assets():
-    global background, car, traffic
+    global background, car, traffic, point_effect
 
     background = pygame.image.load(cfg.BACKGROUND).convert()
     background = pygame.transform.scale(background, cfg.SCREEN_SIZE)
@@ -18,3 +20,5 @@ def load_assets():
 
     traffic = pygame.image.load(cfg.TRAFFIC).convert_alpha()
     traffic = pygame.transform.scale(traffic, (50, 90))
+
+    point_effect = pygame.mixer.Sound(cfg.POINT_EFFECT)

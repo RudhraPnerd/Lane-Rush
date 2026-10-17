@@ -5,9 +5,12 @@ pygame.init()
 SCREEN_SIZE = (480, 720)
 WINDOW_TITLE = 'Lane Rush'
 FPS = 60
+
 BACKGROUND = 'assets/sprites/background.png'
 CAR = 'assets/sprites/car.png'
 TRAFFIC = 'assets/sprites/traffic.png'
+
+POINT_EFFECT = 'assets/audio/point.wav'
 
 LANES = 4
 ROAD_LEFT = 67

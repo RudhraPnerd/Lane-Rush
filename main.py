@@ -3,11 +3,12 @@ import random
 import configs as cfg
 import objects as obj
 import assets as ast
+import high_score as hs
 
 pygame.init()
 
 score = 0
-high_score = 0
+high_score = hs.load_high_score()
 score_timer = 0
 
 screen = pygame.display.set_mode(cfg.SCREEN_SIZE)
@@ -37,11 +38,11 @@ while running:
     if score_timer >= 1:
         score_timer -= 1
         score += 1
-        cfg.SPEED += 1
+        cfg.SPEED = min(cfg.SPEED + 1, 900)
         bg.speed = cfg.SPEED
-        cfg.SPAWN_MIN -= 0.001
-        cfg.SPAWN_MAX -= 0.001
-        print(score)
+        cfg.SPAWN_MIN = max(0.15, cfg.SPAWN_MIN - 0.001)
+        cfg.SPAWN_MAX = max(0.4, cfg.SPAWN_MAX - 0.001)
+        ast.point_effect.play()
 
     if score > high_score:
         high_score = score
@@ -65,9 +66,9 @@ while running:
     car.draw(screen)
 
     score_text = cfg.FONT.render(str(score), True, (255, 255, 255))
-
     screen.blit(score_text, (10, 10))
 
     pygame.display.flip()
 
+hs.save_high_score(high_score)
 pygame.quit()
