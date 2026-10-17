@@ -8,9 +8,10 @@ car = None
 traffic = None
 
 point_effect = None
+high_score_reached_effect = None
 
 def load_assets():
-    global background, car, traffic, point_effect
+    global background, car, traffic, point_effect, high_score_reached_effect
 
     background = pygame.image.load(cfg.BACKGROUND).convert()
     background = pygame.transform.scale(background, cfg.SCREEN_SIZE)
@@ -22,3 +23,4 @@ def load_assets():
     traffic = pygame.transform.scale(traffic, (50, 90))
 
     point_effect = pygame.mixer.Sound(cfg.POINT_EFFECT)
+    high_score_reached_effect = pygame.mixer.Sound(cfg.HIGH_SCORE_REACHED_EFFECT)

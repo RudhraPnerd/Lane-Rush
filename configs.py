@@ -11,6 +11,7 @@ CAR = 'assets/sprites/car.png'
 TRAFFIC = 'assets/sprites/traffic.png'
 
 POINT_EFFECT = 'assets/audio/point.wav'
+HIGH_SCORE_REACHED_EFFECT = 'assets/audio/high_score_reached.wav'
 
 LANES = 4
 ROAD_LEFT = 67

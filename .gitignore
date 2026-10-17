@@ -26,3 +26,6 @@ desktop.ini
 # Logs and local files
 *.log
 .env
+
+# Game-specific
+high_score.txt
