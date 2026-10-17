@@ -19,7 +19,7 @@ FPS = 60
 BACKGROUND = resource_path('assets/sprites/background.png')
 CAR = resource_path('assets/sprites/car.png')
 TRAFFIC = resource_path('assets/sprites/traffic.png')
-ICON = resource_path('assets/icon.png')
+ICON = resource_path('assets/icon.ico')
 
 POINT_EFFECT = resource_path('assets/audio/point.wav')
 HIGH_SCORE_REACHED_EFFECT = resource_path('assets/audio/high_score_reached.wav')
