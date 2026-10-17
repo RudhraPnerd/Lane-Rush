@@ -24,3 +24,4 @@ def load_assets():
 
     point_effect = pygame.mixer.Sound(cfg.POINT_EFFECT)
     high_score_reached_effect = pygame.mixer.Sound(cfg.HIGH_SCORE_REACHED_EFFECT)
+    
